@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+:root {
+  --bg: #1e1e1e; /* Darker dark mode */
+  --cozy-brown: #3e2723;
+  --cozy-beige: #d7ccc8;
+  --pixel-green: #00ff41;
+  --pixel-gold: #ffd700;
+  --pixel-blue: #00e5ff;
+  --card-bg: #2a2a2a;
+  --border-size: 4px;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--cozy-beige);
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  image-rendering: pixelated;
+}
+
+h1, h2, h3 {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+}
+
+.pixel-border {
+  border: var(--border-size) solid #000;
+  box-shadow: 
+    0 var(--border-size) 0 0 #000,
+    0 calc(-1 * var(--border-size)) 0 0 #000,
+    var(--border-size) 0 0 0 #000,
+    calc(-1 * var(--border-size)) 0 0 0 #000;
+  background: var(--card-bg);
+  padding: 1rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Home Page Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.project-card {
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.project-tag {
+  font-size: 0.8rem;
+  color: var(--pixel-gold);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.project-title {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* Project Detail */
+.detail-view {
+  background: #111;
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+.back-btn {
+  color: var(--pixel-green);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.media-container {
+  margin: 2rem 0;
+  background: #000;
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #333;
+}
+
+.media-container img, .media-container video {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.metrics-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.metric {
+  border: 2px solid var(--pixel-blue);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.metric .label { color: #888; margin-right: 8px; }
+
+/* Transitions */
+.page-enter-active, .page-leave-active {
+  transition: opacity 0.5s ease;
+}
+.page-enter-from, .page-leave-to {
+  opacity: 0;
+}

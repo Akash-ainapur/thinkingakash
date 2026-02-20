@@ -1,0 +1,92 @@
+[
+  {
+    "id": "tictactoe-ai",
+    "title": "The Machine Mind",
+    "tag": "Logic",
+    "summary": "Akash built the brain, I just gave it a face. Good luck.",
+    "content": "This project started because I wanted to see if I could actually build something that was impossible to beat. Not just difficult, but mathematically perfect. I spent a lot of time on the backend logic, using the Minimax algorithm to make sure the machine always makes the best possible move. It basically looks ahead at every single board state (all 255,168 of them) and assigns a score to each move. If there's a way to win, it finds it. If there's no way to win, it forces a tie. It never loses. After I got the brain working, I told Loom [Akash's Assistant] to design a terminal-style interface for it so people could actually play against it and feel the frustration in style. It's a weird partnership: I handle the logic and the math, and Loom handles the pixelated look and the sass. Every time someone plays it, they think they found a trick, but the math is just too solid. It’s a clean reminder of how logic works when you don't give it any room to hallucinate.",
+    "isGame": true,
+    "metrics": {
+      "brain": "Akash (Minimax)",
+      "face": "Loom [Akash's Assistant]",
+      "odds": "Zero"
+    }
+  },
+  {
+    "id": "ai-bootcamp",
+    "title": "Vahani AI Bootcamp",
+    "tag": "Teaching",
+    "summary": "Designed and led a live AI & n8n bootcamp for top Indian scholars.",
+    "content": "Designing this bootcamp was a massive learning curve for me. It wasn't just about knowing AI; it was about how to teach it to people who were actually curious. I spent weeks rehearsing the sessions and coordinating with Preeti, another Vahani scholar who led the team with me. We didn't want it to be another boring college-style lecture, so we curated everything carefully. We brought in memes, used AI to generate songs to keep people awake, and tried to match the attention span of a student. Coordination was the hardest part—working remotely, keeping deadlines, and the frustration of tech not working when you need it most. We had scholars from all over India, so making it engaging was a must. I rehearsed the PPT flow over and over, made sure the internet was solid, and handled every small detail. At the end, seeing the feedback was the best part. We got a 4.64 satisfaction rating, and students were asking for 2-3 more sessions. It proved the theory that you learn best by teaching others, and honestly, it felt more valuable than any internship I've done. I've even added some insights from our feedback sheet here to keep it data-backed and real.",
+    "metrics": {
+      "satisfaction": "4.64/5.0",
+      "session_value": "4.27/5.0",
+      "engagement": "Memes & AI Music"
+    },
+    "feedback": [
+      "2-3 more Sessions requested",
+      "Exceptional engagement through AI songs",
+      "Proved the learning-by-teaching theory"
+    ],
+    "media": {
+      "type": "video",
+      "url": "/media/bootcamp_vibe.mp4"
+    },
+    "proofs": [
+      { "type": "image", "url": "/media/certificate.png", "label": "CERTIFICATE_OF_LEADERSHIP" },
+      { "type": "image", "url": "/media/session_snap.png", "label": "LIVE_SESSION_DUMP" },
+      { "type": "image", "url": "/media/snap2.png", "label": "CURRICULUM_DESIGN_LOG" }
+    ]
+  },
+  {
+    "id": "insta-automation",
+    "title": "Insta_Working",
+    "tag": "Automation/n8n",
+    "summary": "Full-cycle Instagram automation via n8n and Facebook Graph API.",
+    "content": "I got tired of the manual effort it takes to post on Instagram, so I decided to build my own automation pipeline. Most people use apps like Buffer, but I wanted something that was mine and didn't cost a subscription fee. I used n8n to build a workflow that handles the entire process. It’s triggered by a simple Telegram message from my phone. The workflow captures the image and caption, then hits the Facebook Graph API. The tricky part was the multi-stage handshake—you have to create a 'container ID' first and then trigger a separate media publish call. It was a lot of trial and error with API versions (using v22.0) and making sure the auth tokens stayed valid. Now, I just send a photo to my private Telegram bot and it goes live on the feed automatically. No middleman, no extra tools, just direct automation that I can tweak whenever I want. It’s a great example of using no-code tools like n8n to solve a high-code problem like social media management overhead.",
+    "metrics": {
+      "platform": "n8n",
+      "API": "Facebook Graph v22.0",
+      "triggers": "Telegram / Webhook"
+    },
+    "proofs": [
+      { "type": "image", "url": "/media/insta-auto/n8n_canvas_final.jpg", "label": "N8N_WORKFLOW_CANVAS" }
+    ]
+  },
+  {
+    "id": "ceque-internship",
+    "title": "CEQUE_INTERNSHIP",
+    "tag": "Work/Web",
+    "summary": "Communications & Web Development Internship at CEQUE.",
+    "content": "Honestly, surviving as a developer isn't just about React and Tailwind—it's about how fast you can adapt. In my internship at CEQUE, I realized that real organisations don't always use the 'cool' new stuff. They had their site on WordPress. Even though I was learning HTML, CSS, and React, I had to pivot immediately to help them out. Since I’d played around with WordPress for my own site before, I could actually be useful right away. More than the code, I learned how people actually work together in a real service. Communication matters way more than I thought. It was a real lesson in being a professional and doing what needs to be done, not just being a coder who only knows one way.",
+    "metrics": {
+      "role": "Communications/Web",
+      "duration": "3 Months",
+      "remuneration": "Professional"
+    },
+    "media": {
+      "type": "image",
+      "url": "/media/internship/offer_letter_v2.jpg"
+    }
+  },
+  {
+    "id": "krishibodh",
+    "title": "Hardware Control",
+    "tag": "IOT/AI",
+    "summary": "Giving LLMs control over heavy physical hardware (Krishibodh).",
+    "content": "The machine actually called me out today. We’ve been working on Krishibodh, which is essentially a FarmBot-style setup—an automated agricultural system that handles precise plant care. It’s one thing to see code on a screen, but it’s a whole different vibe when you give that code physical control over a gantry and sensors. I was just testing it and told the bot: 'Hey, Plant 2 is dying.' The machine moved its gantry over to the plant, dipped the moisture sensor into the soil, checked the camera feed, and came back with a response that felt way too personal. It basically told me: 'Are you lying? I checked, and there is nothing wrong with that plant.' I didn't know whether to be annoyed or proud. I went with proud. Closing the loop between a digital 'brain' and actual physical hardware is messy and frustrating, but seeing the system think for itself makes it worth it. Still a lot to build, but at least I know the machine is watching.",
+    "metrics": {
+      "platform": "Raspberry Pi 4",
+      "controller": "Custom Python Logic",
+      "latency": "Real-time"
+    },
+    "media": {
+      "type": "video",
+      "url": "/media/krishibodh.mp4"
+    },
+    "proofs": [
+      { "type": "image", "url": "/media/krishibodh/logo.jpg", "label": "PROJECT_IDENTITY" },
+      { "type": "image", "url": "/media/krishibodh/robot.jpg", "label": "HARDWARE_PROTOTYPE" }
+    ]
+  }
+]
