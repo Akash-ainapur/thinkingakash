@@ -55,19 +55,22 @@
   },
   {
     "id": "ceque-internship",
-    "title": "CEQUE_INTERNSHIP",
-    "tag": "Work/Web",
-    "summary": "Communications & Web Development Internship at CEQUE.",
-    "content": "Honestly, surviving as a developer isn't just about React and Tailwind—it's about how fast you can adapt. In my internship at CEQUE, I realized that real organisations don't always use the 'cool' new stuff. They had their site on WordPress. Even though I was learning HTML, CSS, and React, I had to pivot immediately to help them out. Since I’d played around with WordPress for my own site before, I could actually be useful right away. More than the code, I learned how people actually work together in a real service. Communication matters way more than I thought. It was a real lesson in being a professional and doing what needs to be done, not just being a coder who only knows one way.",
+    "title": "Professional Adaptation",
+    "tag": "Work/Internship",
+    "summary": "Real-world experience at @Vahani Scholarship and @CEQUE.",
+    "content": "Honestly, surviving as a developer isn't just about React and Tailwind—it's about how fast you can adapt. During my time at @Vahani Scholarship as a Social Media Intern, I managed their entire digital presence, focusing on high-signal content and engagement. Then, during my internship at CEQUE, I realized that real organisations don't always use the 'cool' new stuff. They had their site on WordPress. Even though I was learning HTML, CSS, and React, I had to pivot immediately to help them out. Since I’d played around with WordPress for my own site before, I could actually be useful right away. More than the code, I learned how people actually work together in a real service. Communication matters way more than I thought. It was a real lesson in being a professional and doing what needs to be done, not just being a coder who only knows one way.",
     "metrics": {
-      "role": "Communications/Web",
-      "duration": "3 Months",
-      "remuneration": "Professional"
+      "roles": "Social Media / Web Dev",
+      "impact": "Digital Presence + Platform Pivot",
+      "vibe": "Professional Reality"
     },
     "media": {
       "type": "image",
       "url": "/media/internship/offer_letter_v2.jpg"
-    }
+    },
+    "proofs": [
+      { "type": "image", "url": "/media/internship/vahani_social.png", "label": "VAHANI_SOCIAL_PRESENCE" }
+    ]
   },
   {
     "id": "krishibodh",
