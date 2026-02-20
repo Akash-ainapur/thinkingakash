@@ -122,9 +122,11 @@ const reset = () => {
 
 <style scoped>
 .game-container {
-  max-width: 400px;
+  width: 100%;
+  max-width: 320px;
   margin: 0 auto;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .status-bar {
@@ -133,15 +135,17 @@ const reset = () => {
   padding: 0.5rem;
   margin-bottom: 1rem;
   font-family: var(--font-mono);
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 8px;
   background: #000;
-  padding: 10px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cell {
@@ -150,9 +154,10 @@ const reset = () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-family: 'Press Start 2P';
   cursor: pointer;
+  min-width: 0;
 }
 
 .cell:hover { background: #333; }
@@ -161,8 +166,9 @@ const reset = () => {
   margin-top: 1.5rem;
   background: var(--pixel-gold);
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   font-family: 'Press Start 2P';
+  font-size: 0.7rem;
   cursor: pointer;
 }
 </style>
