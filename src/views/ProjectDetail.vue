@@ -5,6 +5,15 @@ import TicTacToe from '../components/TicTacToe.vue'
 
 const route = useRoute()
 const project = projects.find(p => p.id === route.params.id)
+
+const formatContent = (text) => {
+  if (!text) return ''
+  // Regex to find URLs and wrap them in <a> tags
+  const urlRegex = /(https?:\/\/[^\s]+)/g
+  return text.replace(urlRegex, (url) => {
+    return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="external-link">${url}</a>`
+  })
+}
 </script>
 
 <template>
@@ -52,7 +61,7 @@ def minimax(board, depth, is_maximizing):
       
       <div class="technical-log pixel-border">
         <div class="log-header">PROJECT_DETAIL_DUMP.txt</div>
-        <p>{{ project.content }}</p>
+        <p v-html="formatContent(project.content)"></p>
       </div>
 
       <div v-if="project.feedback" class="technical-log pixel-border feedback-log">
@@ -190,5 +199,16 @@ def minimax(board, depth, is_maximizing):
   height: auto;
   display: block;
   image-rendering: pixelated;
+}
+
+:deep(.external-link) {
+  color: var(--pixel-gold);
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+:deep(.external-link:hover) {
+  background: var(--pixel-gold);
+  color: #000;
 }
 </style>
