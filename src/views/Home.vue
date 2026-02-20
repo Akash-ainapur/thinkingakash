@@ -14,7 +14,7 @@ const navigateToProject = (id) => {
     <header>
       <h1>AKASH AINAPUR</h1>
       <p class="intro">
-        [SYSTEM LOG: 2025 REVIEW] - Exploring the frontier of Agentic AI, Hardware, and Automation.
+        Experimenting till I find it
       </p>
     </header>
 
