@@ -8,7 +8,6 @@ const project = projects.find(p => p.id === route.params.id)
 
 const formatContent = (text) => {
   if (!text) return ''
-  // Regex to find URLs and wrap them in <a> tags
   const urlRegex = /(https?:\/\/[^\s]+)/g
   return text.replace(urlRegex, (url) => {
     return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="external-link">${url}</a>`
@@ -22,14 +21,13 @@ const formatContent = (text) => {
     
     <header>
       <span class="tag">{{ project.tag }}</span>
-      <h2>{{ project.title }}</h2>
+      <h2 class="project-title">{{ project.title }}</h2>
     </header>
 
     <div v-if="project.isGame" class="game-section">
       <p class="summary">TEST LOG: Unbeatable Logic Verification</p>
       <TicTacToe />
       
-      <!-- Python Logic Explanation -->
       <div class="technical-log pixel-border python-logic">
         <div class="log-header">LOGIC_EXPLANATION: backend_mind.py</div>
         <div class="logic-content">
@@ -85,6 +83,9 @@ def minimax(board, depth, is_maximizing):
         </div>
       </div>
     </div>
+    
+    <!-- Spacer for Loom -->
+    <div class="bottom-spacer"></div>
   </div>
   
   <div v-else class="container">
@@ -100,11 +101,17 @@ def minimax(board, depth, is_maximizing):
   font-size: 1rem;
 }
 
+.project-title {
+  word-break: break-all;
+  line-height: 1.2;
+}
+
 .technical-log {
   background: #000;
   margin-top: 2rem;
   font-family: 'VT323';
   line-height: 1.4;
+  overflow: hidden;
 }
 
 .log-header {
@@ -162,10 +169,17 @@ def minimax(board, depth, is_maximizing):
   border-left: 4px solid var(--pixel-gold);
   font-family: 'VT323', monospace;
   margin-top: 1rem;
+  overflow-x: auto;
+}
+
+.code-snippet pre {
+  margin: 0;
 }
 
 .code-snippet code {
   color: var(--pixel-green);
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .metrics-row {
@@ -179,6 +193,8 @@ def minimax(board, depth, is_maximizing):
   border: 2px solid var(--pixel-gold);
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
+  max-width: 100%;
+  word-break: break-word;
 }
 
 .metric .label { color: #888; margin-right: 8px; }
@@ -201,14 +217,13 @@ def minimax(board, depth, is_maximizing):
   image-rendering: pixelated;
 }
 
-:deep(.external-link) {
-  color: var(--pixel-gold);
-  text-decoration: underline;
-  word-break: break-all;
+.bottom-spacer {
+  height: 120px;
 }
 
-:deep(.external-link:hover) {
-  background: var(--pixel-gold);
-  color: #000;
+@media (max-width: 600px) {
+  .metric {
+    width: 100%;
+  }
 }
 </style>
