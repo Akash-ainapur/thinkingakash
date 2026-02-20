@@ -91,5 +91,17 @@
       { "type": "image", "url": "/media/krishibodh/logo.jpg", "label": "PROJECT_IDENTITY" },
       { "type": "image", "url": "/media/krishibodh/robot.jpg", "label": "HARDWARE_PROTOTYPE" }
     ]
+  },
+  {
+    "id": "computer-use",
+    "title": "COMPUTER_USE_LOG",
+    "tag": "OpenSource/AI",
+    "summary": "Exploring the frontier of AI-controlled operating systems.",
+    "content": "I've been deep in the 'Computer Use' space lately. It’s one of the most interesting open-source developments I’ve seen. The idea is simple but the implementation is massive: giving an AI agent the ability to actually look at a screen, move a cursor, and interact with a computer just like a human does. I spent a lot of time playing with the open-source implementation of this, which is exactly what's being used in OpenClaw now. It feels crazy to see where this space is heading—we're moving away from just chatting with AI to having AI actually execute tasks across your entire OS. Seeing it navigate a browser and handle files autonomously makes you realize that the way we use computers is about to change completely.",
+    "metrics": {
+      "tech": "Anthropic Computer Use / OpenClaw",
+      "status": "Experimental",
+      "vibe": "Future OS"
+    }
   }
 ]
