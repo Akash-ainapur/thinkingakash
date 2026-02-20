@@ -123,7 +123,7 @@ const reset = () => {
 <style scoped>
 .game-container {
   width: 100%;
-  max-width: 320px;
+  max-width: 400px;
   margin: 0 auto;
   text-align: center;
   box-sizing: border-box;
@@ -132,29 +132,29 @@ const reset = () => {
 .status-bar {
   background: #000;
   color: var(--pixel-green);
-  padding: 0.5rem;
-  margin-bottom: 1rem;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 1.1rem;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 12px;
   background: #000;
-  padding: 8px;
+  padding: 12px;
   width: 100%;
+  aspect-ratio: 1 / 1;
   box-sizing: border-box;
 }
 
 .cell {
   background: #222;
-  aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-family: 'Press Start 2P';
   cursor: pointer;
   min-width: 0;
@@ -163,12 +163,22 @@ const reset = () => {
 .cell:hover { background: #333; }
 
 .reset-btn {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   background: var(--pixel-gold);
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.5rem;
   font-family: 'Press Start 2P';
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .cell {
+    font-size: 2rem;
+  }
+  
+  .status-bar {
+    font-size: 0.9rem;
+  }
 }
 </style>

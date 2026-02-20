@@ -15,23 +15,29 @@ body {
   background-color: var(--bg);
   color: var(--cozy-beige);
   font-family: 'VT323', monospace;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 0;
   padding: 0;
   image-rendering: pixelated;
   overflow-x: hidden;
 }
 
+h1, h2, h3 {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+}
+
 h1 {
-  font-size: 2rem;
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .pixel-border {
@@ -40,24 +46,24 @@ h3 {
     0 var(--border-size) 0 0 #000,
     0 calc(-1 * var(--border-size)) 0 0 #000,
     var(--border-size) 0 0 0 #000,
-    calc(-1 * var(--border-size)) 0 0 0 #000;
+    calc(-1 * var(--border-size)) 0 0 #000;
   background: var(--card-bg);
-  padding: 1rem;
-  margin: 4px;
+  padding: 1.5rem;
+  margin: 10px 0;
 }
 
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 /* Home Page Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 @media (max-width: 600px) {
@@ -66,12 +72,22 @@ h3 {
   }
   
   h1 {
-    font-size: 1.5rem;
-    line-height: 1.4;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    word-break: break-word;
+  }
+
+  .intro {
+    font-size: 1.4rem;
   }
   
   .container {
-    padding: 0.8rem;
+    padding: 1.2rem;
+  }
+
+  .pixel-border {
+    padding: 1.2rem;
+    margin: 15px 0;
   }
 }
 
@@ -79,7 +95,6 @@ h3 {
   cursor: pointer;
   transition: transform 0.2s, filter 0.2s;
   position: relative;
-  width: calc(100% - 10px);
 }
 
 .project-card:hover {
@@ -95,7 +110,7 @@ h3 {
 }
 
 .project-title {
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 0.5rem 0;
 }
 
@@ -109,13 +124,13 @@ h3 {
 .back-btn {
   color: var(--pixel-green);
   text-decoration: none;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   display: inline-block;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 .media-container {
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   background: #000;
   width: 100%;
   aspect-ratio: auto;
@@ -135,18 +150,18 @@ h3 {
 
 .metrics-row {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
 }
 
 .metric {
   border: 2px solid var(--pixel-blue);
-  padding: 0.4rem 0.8rem;
-  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
 }
 
-.metric .label { color: #888; margin-right: 6px; }
+.metric .label { color: #888; margin-right: 8px; }
 
 /* Transitions */
 .page-enter-active, .page-leave-active {
